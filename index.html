@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dion Selimi - Développeur Web Front-End</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1f4788 0%, #2d5a9e 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header .title {
+            font-size: 1.3em;
+            font-weight: 300;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        header .contact {
+            font-size: 0.95em;
+            opacity: 0.85;
+            margin-top: 15px;
+        }
+
+        header .contact a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: opacity 0.3s;
+        }
+
+        header .contact a:hover {
+            opacity: 0.7;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 50px 40px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            color: #1f4788;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+        }
+
+        /* À Propos */
+        .about p {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Projets */
+        .project {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .project h3 {
+            font-size: 1.5em;
+            color: #1f4788;
+            margin-bottom: 8px;
+        }
+
+        .project-meta {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .project-desc {
+            margin-bottom: 15px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .project ul {
+            list-style-position: inside;
+            margin-left: 15px;
+        }
+
+        .project li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .project-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.95em;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #764ba2;
+        }
+
+        /* Compétences */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 3px solid #667eea;
+        }
+
+        .skill-category h4 {
+            color: #1f4788;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+
+        .skill-category p {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: #f0f0f0;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header .title {
+                font-size: 1.1em;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            section h2 {
+                font-size: 1.4em;
+            }
+
+            .project {
+                padding: 20px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header .contact {
+                flex-direction: column;
+            }
+
+            header .contact a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>DION SELIMI</h1>
+            <div class="title">Développeur Web Front-End | Stagiaire en Alternance</div>
+            <div class="contact">
+                <a href="mailto:selimidion70@gmail.com">📧 selimidion70@gmail.com</a>
+                <a href="tel:+32489700933">📱 +32 489 700 933</a>
+                <a href="https://www.linkedin.com/in/dion-selimi-662878340" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/selimidion70-png" target="_blank">💻 GitHub</a>
+            </div>
+        </header>
+
+        <!-- Contenu Principal -->
+        <div class="content">
+            <!-- À Propos -->
+            <section class="about">
+                <h2>À Propos</h2>
+                <p>Développeur web front-end passionné en formation à l'EFP Bruxelles. Je suis motivé par l'apprentissage continu et enthousiaste à l'idée de contribuer à des projets réels en équipe. Je recherche une alternance long terme pour consolider mes compétences sur le terrain et maîtriser les meilleures pratiques du développement web moderne.</p>
+            </section>
+
+            <!-- Projets -->
+            <section class="projects">
+                <h2>Projets</h2>
+
+                <div class="project">
+                    <h3>🎉 BE CHILL – Site de réservation pour salon de massage</h3>
+                    <div class="project-meta">Hackathon EFP | Février 2025 | Équipe de 10 développeurs</div>
+                    <div class="project-desc">Développement d'un site web complet pour un salon de massage fictif situé à Uccle, réalisé en 3 jours en équipe pluridisciplinaire.</div>
+                    
+                    <strong>Responsabilités :</strong>
+                    <ul>
+                        <li>Développement front-end complet : HTML5, CSS3, JavaScript</li>
+                        <li>Conception responsive mobile-first</li>
+                        <li>Gestion de branches Git, pull requests, résolution de conflits</li>
+                        <li>Déploiement et mise en ligne du site fonctionnel</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <a href="https://github.com/selimidion70-png/bechill_landing_page" class="btn" target="_blank">📂 Voir le code</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Compétences -->
+            <section class="skills">
+                <h2>Compétences</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>🎨 Frontend</h4>
+                        <p>HTML5, CSS3, JavaScript (ES6+), React, Design Responsif, UX/UI</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>⚙️ Backend & Tools</h4>
+                        <p>PHP, Git & GitHub, Visual Studio Code, Figma</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>🛠️ Gestion de Projet</h4>
+                        <p>Trello, Notion, Méthodes agiles, Collaboration en équipe</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>🌍 Langues</h4>
+                        <p>Français (Langue maternelle), Anglais (B1), Albanais (B1)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Formation -->
+            <section class="formation">
+                <h2>Formation</h2>
+                <div class="project">
+                    <h3>Développeur Web Front-End</h3>
+                    <div class="project-meta">EFP Bruxelles | Septembre 2025 - Mai 2027 | Bootcamp intensif</div>
+                    <div class="project-desc">Formation complète en développement web couvrant HTML5, CSS3, JavaScript, React, PHP, Git/GitHub, design responsif, et outils de développement modernes.</div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Dion Selimi. Développeur Web Front-End | Bruxelles, Belgique</p>
+            <p><a href="https://github.com/selimidion70-png" target="_blank">GitHub</a> • <a href="https://www.linkedin.com/in/dion-selimi-662878340" target="_blank">LinkedIn</a> • <a href="mailto:selimidion70@gmail.com">Email</a></p>
+        </footer>
+    </div>
+</body>
+</html>
